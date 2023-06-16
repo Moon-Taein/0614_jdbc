@@ -40,8 +40,10 @@ public class Main2 {
 
 			while (rs.next()) {
 				String name = rs.getString("name");
+				String continent = rs.getString("continent");
 				int population = rs.getInt("population");
-				System.out.printf("%s : %d\n", name, population);
+				double gnp = rs.getDouble("gnp");
+				System.out.printf("%s : %s : %d : %f\n", name, continent, population, gnp);
 			}
 
 		} catch (ClassNotFoundException e) {
